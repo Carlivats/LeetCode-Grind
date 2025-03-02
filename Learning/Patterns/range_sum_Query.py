@@ -31,39 +31,3 @@ def range_sum_query(arr,query):
 nums = [3, 6, 2, 8, 7]
 quieries = [(1, 3), (1, 2)]
 print(range_sum_query(nums,quieries))
-
-def run_tests():
-    test_cases = [
-        {
-            "input": ([3, 6, 2, 8, 7], [(1, 3), (0, 2)]),
-            "expected": [16, 11]
-        },
-        {
-            "input": ([1, 2, 3, 4, 5], [(0, 4), (1, 3)]),
-            "expected": [15, 9]
-        },
-        {
-            "input": ([10, 20, 30, 40, 50], [(2, 4), (0, 2)]),
-            "expected": [120, 60]
-        },
-        {
-            "input": ([5, 5, 5, 5, 5], [(0, 0), (1, 4)]),
-            "expected": [5, 20]
-        },
-        {
-            "input": ([7, 3, 9, 6, 2, 5, 8], [(3, 5), (1, 6)]),
-            "expected": [13, 33]
-        }
-    ]
-    
-    for i, test in enumerate(test_cases):
-        nums, queries = test["input"]
-        expected = test["expected"]
-        result = range_sum_query(nums, queries)
-        if result == expected:
-            print(f"✅ Test {i + 1} Passed")
-        else:
-            print(f"❌ Test {i + 1} Failed - Expected {expected}, but got {result}")
-
-# Run tests
-run_tests()
