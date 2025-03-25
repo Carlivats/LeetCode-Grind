@@ -1,4 +1,6 @@
-from TreeSum import TreeSum
+from TreeSum import treeSum
+from TreeMax import treeMax
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -19,8 +21,11 @@ def test_TreeSum():
     root.left = TreeNode(3, TreeNode(1), TreeNode(4))
     root.right = TreeNode(8, None, TreeNode(10))
 
-    result = TreeSum(root)
+    result = treeSum(root)
     print("TreeSum result:", result)
+
+    result = treeMax(root)
+    print("TreeMax result:", result)
 
 # Run the test
 test_TreeSum()
