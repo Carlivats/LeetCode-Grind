@@ -1,4 +1,7 @@
-from TreeSum import TreeSum
+from TreeSum import treeSum
+from TreeMax import treeMax
+from TreeHeight import treeHeight
+from BFS import bfs
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -19,8 +22,17 @@ def test_TreeSum():
     root.left = TreeNode(3, TreeNode(1), TreeNode(4))
     root.right = TreeNode(8, None, TreeNode(10))
 
-    result = TreeSum(root)
+    result = treeSum(root)
     print("TreeSum result:", result)
+
+    result = treeMax(root)
+    print("TreeMax result:", result)
+
+    result = treeHeight(root)
+    print("TreeHeight result:", result)
+
+    result = bfs(root)
+    print("BFS result:", result)
 
 # Run the test
 test_TreeSum()
